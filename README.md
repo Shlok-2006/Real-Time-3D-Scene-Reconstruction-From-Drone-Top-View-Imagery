@@ -31,30 +31,30 @@ This project won **3rd Prize** in a competitive hackathon for its innovative app
 ## ▶️ How to Run the Project
 
 ### 1️⃣ Install Required Dependencies
-    ```bash
+    
     pip install numpy open3d opencv-python pillow transformers torch
 
 ### 2️⃣ Prepare Input Images
-    ```bash
+    
     input_images/
 - Supported formats: .jpg, .jpeg, .png, .webp
 
 ### 3️⃣ Generate Depth Maps
-    ```bash
+    
     python depth_estimation.py
 - Depth maps will be saved in:
     ```bash
     depth_outputs/
 
 ### 4️⃣ Generate 3D Point Cloud
-    ```bash
+    
     python point_cloud.py
 - Output:
     ```bash
     pc.ply
 
 ### 5️⃣ Reconstruct 3D Mesh
-    ```bash
+    
     python mesh_reconstruction.py
 - Output:
      ```bash
