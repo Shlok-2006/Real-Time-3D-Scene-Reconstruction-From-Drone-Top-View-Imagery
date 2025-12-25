@@ -28,20 +28,69 @@ This project won **3rd Prize** in a competitive hackathon for its innovative app
 
 ---
 
-## 🧠 Pipeline Overview
-1. Input RGB images captured from multiple viewpoints  
-2. Depth estimation using Depth Anything V2  
-3. 3D point cloud generation using depth and camera intrinsics  
-4. View alignment and point cloud fusion  
-5. Poisson surface reconstruction for mesh generation  
-6. Export and visualization of final 3D model
+## ▶️ How to Run the Project
+
+### 1️⃣ Install Required Dependencies
+    ```bash
+    pip install numpy open3d opencv-python pillow transformers torch
+
+### 2️⃣ Prepare Input Images
+    ```bash
+    input_images/
+- Supported formats: .jpg, .jpeg, .png, .webp
+
+### 3️⃣ Generate Depth Maps
+    ```bash
+    python depth_estimation.py
+- Depth maps will be saved in:
+    ```bash
+    depth_outputs/
+
+### 4️⃣ Generate 3D Point Cloud
+    ```bash
+    python point_cloud.py
+- Output:
+    ```bash
+    pc.ply
+
+### 5️⃣ Reconstruct 3D Mesh
+    ```bash
+    python mesh_reconstruction.py
+- Output:
+     ```bash
+     3d_model.obj
 
 ---
 
-##📌 Applications
--3D scene reconstruction
--AR / VR environments
--Robotics and perception
--Digital twin creation
--Drone and aerial imaging
--3D asset generation
+## 🧠 Pipeline Overview
+
+1. **Input RGB Images**  
+   - Images captured from multiple viewpoints (front, right, back, left)
+
+2. **Depth Estimation**  
+   - Depth maps generated using **Depth Anything V2**
+
+3. **Point Cloud Generation**  
+   - Depth + camera intrinsics used to compute 3D coordinates
+
+4. **View Alignment & Fusion**  
+   - Multiple views rotated and merged into a single point cloud
+
+5. **Mesh Reconstruction**  
+   - Poisson surface reconstruction for smooth 3D mesh generation
+
+6. **Export & Visualization**  
+   - Final outputs saved as `.ply` and `.obj` files
+
+---
+
+## 📌 Applications
+
+- 3D Scene Reconstruction
+- Drone and Aerial Imagery
+- Robotics and Autonomous Perception
+- AR / VR Environment Generation
+- Digital Twin Creation
+- 3D Asset Generation
+- Smart City and Mapping Applications
+
