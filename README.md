@@ -41,7 +41,7 @@ This project won **3rd Prize** in a competitive hackathon for its innovative app
 
 ### 3️⃣ Generate Depth Maps
     
-    python depth_estimation.py
+    python depth_map.py
 - Depth maps will be saved in:
     ```bash
     depth_outputs/
@@ -55,7 +55,7 @@ This project won **3rd Prize** in a competitive hackathon for its innovative app
 
 ### 5️⃣ Reconstruct 3D Mesh
     
-    python mesh_reconstruction.py
+    python 3d_model.py
 - Output:
      ```bash
      3d_model.obj
